@@ -42,7 +42,7 @@ if __name__ == "__main__":
             label = np.where(npz_data['y_test'] > 0)[1]
     elif 'ntu' in arg.dataset:
         if 'xsub' in arg.dataset:
-            npz_data = np.load('./data/' + 'ntu/' + 'NTU60_CS.npz')
+            npz_data = np.load('../../data/' + 'ntu/' + 'NTU60_CS.npz')
             label = np.where(npz_data['y_test'] > 0)[1]
         elif 'xview' in arg.dataset:
             npz_data = np.load('./data/' + 'ntu/' + 'NTU60_CV.npz')
@@ -112,3 +112,4 @@ if __name__ == "__main__":
 
     print('Top1 Acc: {:.4f}%'.format(acc * 100))
     print('Top5 Acc: {:.4f}%'.format(acc5 * 100))
+    print('ensemble completed')
